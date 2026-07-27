@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, Globe, ChevronDown, Mountain } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Header = () => {
@@ -29,29 +29,29 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white border-b-4 border-[var(--color-primary)] sticky top-0 z-50 shadow-sm" data-component="site-header">
+    <header className="bg-[var(--color-bg-base)] border-b border-[var(--color-border)] sticky top-0 z-50 shadow-sm" data-component="site-header">
       <div className="max-w-[1440px] mx-auto px-10">
-        <div className="flex justify-between items-center h-28">
-          {/* BASF-style Logo Layout */}
-          <Link to="/" className="flex items-center space-x-6">
-            <div className="w-16 h-16 bg-[var(--color-primary)] flex items-center justify-center">
-              <span className="text-white font-black text-4xl">A</span>
+        <div className="flex justify-between items-center h-24">
+          {/* Natural Heritage Logo */}
+          <Link to="/" className="flex items-center space-x-4">
+            <div className="flex items-center justify-center text-[var(--color-accent)]">
+               <Mountain className="w-10 h-10" />
             </div>
-            <div className="border-l border-gray-300 pl-6 py-1">
-              <span className="block text-[var(--color-primary)] font-bold text-3xl leading-none tracking-tighter uppercase">{t('common.brand')}</span>
-              <span className="block text-[var(--color-secondary)] text-[10px] tracking-[0.2em] font-black mt-2 uppercase">{t('common.brandSubtitle')}</span>
+            <div className="flex flex-col">
+              <span className="text-[var(--color-primary)] font-bold text-2xl tracking-tighter leading-none">{t('common.brand')}</span>
+              <span className="text-[var(--color-accent)] text-[9px] font-black uppercase tracking-[0.3em] mt-1.5">{t('common.brandSubtitle')}</span>
             </div>
           </Link>
 
-          {/* Desktop Nav: Clean & Bold */}
+          {/* Desktop Nav: Elegant & Spaced */}
           <nav className="hidden lg:flex space-x-12">
             {navLinks.map((link) => (
               <NavLink
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `text-sm font-bold uppercase tracking-widest transition-colors hover:text-[var(--color-primary)] ${
-                    isActive ? 'text-[var(--color-primary)]' : 'text-gray-500'
+                  `text-[11px] font-black uppercase tracking-[0.2em] transition-colors hover:text-[var(--color-accent)] ${
+                    isActive ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-main)]'
                   }`
                 }
               >
@@ -60,13 +60,12 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Corporate Tools */}
-          <div className="hidden lg:flex items-center space-x-10">
-            {/* Language Switcher */}
+          {/* Tools */}
+          <div className="hidden lg:flex items-center space-x-8">
             <div className="relative">
               <button 
                 onClick={() => setShowLang(!showLang)}
-                className="flex items-center text-xs text-gray-500 font-bold uppercase tracking-widest hover:text-[var(--color-primary)]"
+                className="flex items-center text-[10px] font-black uppercase tracking-widest text-[var(--color-text-muted)] hover:text-[var(--color-primary)]"
               >
                 <Globe className="w-4 h-4 mr-2" />
                 {languages.find(l => l.code === i18n.language.split('-')[0])?.name || 'English'}
@@ -74,12 +73,12 @@ const Header = () => {
               </button>
               
               {showLang && (
-                <div className="absolute right-0 mt-4 w-48 bg-white border-2 border-[var(--color-primary)] shadow-2xl overflow-hidden">
+                <div className="absolute right-0 mt-4 w-48 bg-white border border-[var(--color-border)] shadow-xl overflow-hidden rounded-[var(--radius-base)]">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className="block w-full text-left px-6 py-4 text-xs font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block w-full text-left px-6 py-4 text-[10px] font-black uppercase tracking-widest text-gray-700 hover:bg-[var(--color-bg-alt)] transition-colors"
                     >
                       {lang.name}
                     </button>
@@ -88,13 +87,12 @@ const Header = () => {
               )}
             </div>
 
-            <Link to="/contact" className="btn-primary !px-12 !py-4 shadow-none">
+            <Link to="/contact" className="btn-primary">
               {t('common.inquiry')}
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center">
+          <div className="lg:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-[var(--color-primary)]">
               {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
             </button>
@@ -104,29 +102,22 @@ const Header = () => {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl">
-          <div className="px-10 py-10 space-y-8">
+        <div className="lg:hidden bg-white border-t border-[var(--color-border)]">
+          <div className="px-10 py-10 space-y-6">
             {navLinks.map((link) => (
               <NavLink
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `block text-lg font-bold uppercase tracking-widest ${
-                    isActive ? 'text-[var(--color-primary)]' : 'text-gray-500'
+                  `block text-sm font-black uppercase tracking-widest ${
+                    isActive ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-main)]'
                   }`
                 }
               >
                 {link.name}
               </NavLink>
             ))}
-            <Link
-              to="/contact"
-              onClick={() => setIsOpen(false)}
-              className="block w-full text-center btn-primary py-6"
-            >
-              Contact Us
-            </Link>
           </div>
         </div>
       )}

@@ -1,26 +1,27 @@
 :root {
-  /* BASF-inspired "Corporate Excellence" Palette */
-  --color-primary: #004A96;    /* Iconic BASF Blue */
-  --color-secondary: #00AEEF;  /* Technical Cyan */
-  --color-bg-base: #FFFFFF;    /* Pure White */
-  --color-bg-alt: #F2F2F2;     /* Corporate Light Gray */
-  --color-text-main: #333333;   /* High-contrast Gray */
-  --color-text-muted: #666666;
-  --color-border: #D9D9D9;
+  /* Direction C: "Natural Heritage" - Earthy & Modern Industrial */
+  --color-primary: #18181B;    /* Zinc Black - Modern Industrial Base */
+  --color-accent: #166534;     /* Deep Moss Green - Natural Mineral Origin */
+  --color-accent-warm: #A16207; /* Amber Ore - Thermal/Physical Highlights */
+  --color-bg-base: #FAFAF9;    /* Warm Stone White - Clean & Natural Background */
+  --color-bg-alt: #F5F5F4;     /* Light Pebble Gray - Subtle contrast */
+  --color-text-main: #27272A;   /* Deep Charcoal - High readability */
+  --color-text-muted: #71717A;
+  --color-border: #E7E5E4;
 
-  /* Typography: Modern Grotesque Style */
-  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  /* Typography: Sophisticated Mix */
+  --font-display: 'Playfair Display', serif; /* Elegant for headings */
+  --font-body: 'Inter', system-ui, sans-serif;
 
-  /* Massive Spacing */
+  /* Atmospheric Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1.5rem;
   --space-md: 3rem;
-  --space-lg: 6rem;
-  --space-xl: 12rem;
+  --space-lg: 8rem;
+  --space-xl: 14rem;
 
-  /* BASF Hard Corners */
-  --radius-base: 0px; 
+  /* Natural Radius */
+  --radius-base: 4px; /* Slightly softened for a more organic feel */
 }
 
 @tailwind base;
@@ -32,21 +33,21 @@
     @apply bg-[var(--color-bg-base)] text-[var(--color-text-main)] font-sans antialiased;
   }
   h1, h2, h3 {
-    @apply tracking-tight font-bold text-[var(--color-primary)];
+    @apply tracking-tight font-medium text-[var(--color-primary)];
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-[var(--color-primary)] text-white px-10 py-4 font-bold uppercase tracking-wider text-xs hover:bg-[var(--color-secondary)] transition-colors shadow-sm;
+    @apply bg-[var(--color-primary)] text-white px-10 py-5 rounded-[var(--radius-base)] font-bold uppercase tracking-widest text-[10px] hover:bg-[var(--color-accent)] transition-all;
   }
   .btn-outline {
-    @apply border-2 border-[var(--color-primary)] text-[var(--color-primary)] px-10 py-4 font-bold uppercase tracking-wider text-xs hover:bg-[var(--color-primary)] hover:text-white transition-colors;
+    @apply border border-[var(--color-border)] text-[var(--color-primary)] px-10 py-5 rounded-[var(--radius-base)] font-bold uppercase tracking-widest text-[10px] hover:border-[var(--color-primary)] transition-all;
   }
   .section-container {
     @apply max-w-[1440px] mx-auto px-10 py-32;
   }
   .card-premium {
-    @apply bg-white border border-[var(--color-border)] p-12 hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] transition-shadow;
+    @apply bg-white border border-[var(--color-border)] rounded-[var(--radius-base)] p-12 hover:shadow-xl transition-all duration-500;
   }
 }
