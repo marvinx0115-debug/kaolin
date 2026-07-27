@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -21,12 +20,7 @@ const Hero = () => {
       </div>
 
       <div className="max-w-[1440px] mx-auto px-8 lg:px-12 relative z-10 text-[var(--color-primary)] w-full">
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="max-w-5xl"
-        >
+        <div className="max-w-5xl">
           <div className="flex items-center space-x-4 text-[var(--color-accent)] font-bold mb-10 uppercase tracking-[0.4em] text-[10px]">
             <div className="h-[1px] w-16 bg-[var(--color-accent)]"></div>
             <span>{t('hero.badge')}</span>
@@ -50,19 +44,14 @@ const Hero = () => {
               {t('hero.cta2')}
             </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
       
       {/* Scroll Indicator */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center space-y-4"
-      >
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center space-y-4">
         <span className="text-[10px] uppercase tracking-[0.4em] text-white/40 font-bold">Discover More</span>
         <div className="w-[1px] h-16 bg-gradient-to-b from-white/60 to-transparent"></div>
-      </motion.div>
+      </div>
 
       {/* Quick Stats Overlay - Minimalist Editorial Style */}
       <div className="absolute bottom-0 right-0 w-full lg:w-auto bg-white border-l border-t border-gray-100 hidden lg:block">

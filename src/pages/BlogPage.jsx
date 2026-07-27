@@ -20,7 +20,7 @@ const BlogPage = () => {
       <div className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-100 border border-gray-100">
           {posts.map((post) => (
-            <article key={post.id} className="bg-white group overflow-hidden flex flex-col p-10 transition-colors hover:bg-[var(--color-bg-alt)]">
+            <article key={post.id} className="bg-white group overflow-hidden flex flex-col p-10 hover:bg-[var(--color-bg-alt)]">
               <div className="flex items-center space-x-6 mb-10">
                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--color-accent)]">
                   {post.category}
@@ -31,7 +31,7 @@ const BlogPage = () => {
                 </div>
               </div>
               
-              <h3 className="text-2xl font-black mb-6 leading-tight text-[var(--color-primary)] group-hover:text-[var(--color-accent)] transition-colors">
+              <h3 className="text-2xl font-black mb-6 leading-tight text-[var(--color-primary)] group-hover:text-[var(--color-accent)]">
                 <Link to={`/blog/${post.id}`}>{post.title}</Link>
               </h3>
               
@@ -40,7 +40,7 @@ const BlogPage = () => {
               </p>
               
               <div className="mt-auto">
-                <Link to={`/blog/${post.id}`} className="inline-flex items-center text-[10px] font-black uppercase tracking-[0.3em] text-[var(--color-primary)] group-hover:translate-x-2 transition-transform">
+                <Link to={`/blog/${post.id}`} className="inline-flex items-center text-[10px] font-black uppercase tracking-[0.3em] text-[var(--color-primary)]">
                   Read Report
                   <ArrowRight className="w-3 h-3 ml-3" />
                 </Link>

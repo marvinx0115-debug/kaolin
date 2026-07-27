@@ -39,8 +39,8 @@ const AboutPage = () => {
             
             <div className="grid grid-cols-2 gap-px bg-gray-100 border border-gray-100">
               {stats.map((stat, i) => (
-                <div key={i} className="bg-white p-8 flex flex-col items-center text-center group hover:bg-[var(--color-bg-alt)] transition-colors">
-                  <div className="text-[var(--color-accent)] mb-4 transition-transform group-hover:scale-110">{stat.icon}</div>
+                <div key={i} className="bg-white p-8 flex flex-col items-center text-center group hover:bg-[var(--color-bg-alt)]">
+                  <div className="text-[var(--color-accent)] mb-4">{stat.icon}</div>
                   <div className="text-2xl font-black text-[var(--color-primary)] tracking-tighter">{stat.value}</div>
                   <div className="text-[9px] uppercase tracking-[0.3em] text-[var(--color-text-muted)] font-black mt-2">{stat.label}</div>
                 </div>
@@ -48,8 +48,8 @@ const AboutPage = () => {
             </div>
           </div>
           <div className="relative group">
-            <div className="absolute inset-0 bg-[var(--color-accent)] translate-x-6 translate-y-6 -z-10 transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
-            <img src="/assets/images/hero-industrial.png" alt="Production Facility" className="w-full grayscale group-hover:grayscale-0 transition-all duration-1000" />
+            <div className="absolute inset-0 bg-[var(--color-accent)] translate-x-6 translate-y-6 -z-10"></div>
+            <img src="/assets/images/hero-industrial.png" alt="Production Facility" className="w-full grayscale group-hover:grayscale-0" />
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ const AboutPage = () => {
               content: "With dedicated teams for international trade compliance, we ensure seamless delivery to ports across Europe and the Americas." 
             }
           ].map((item, idx) => (
-            <div key={idx} className="py-24 px-12 group hover:bg-white/5 transition-colors">
+            <div key={idx} className="py-24 px-12 group hover:bg-white/5">
               <h3 className="text-xs uppercase tracking-[0.4em] text-[var(--color-accent)] font-black mb-8">{item.title}</h3>
               <p className="text-lg leading-relaxed text-slate-300 font-medium">{item.content}</p>
             </div>

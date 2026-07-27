@@ -34,7 +34,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <div className="w-12 h-12 bg-[var(--color-primary)] rounded-[var(--radius-base)] flex items-center justify-center mr-4 transition-transform group-hover:rotate-12">
+            <div className="w-12 h-12 bg-[var(--color-primary)] rounded-[var(--radius-base)] flex items-center justify-center mr-4">
               <span className="text-white font-bold text-2xl">{t('common.brand').charAt(0)}</span>
             </div>
             <div>
@@ -50,7 +50,7 @@ const Header = () => {
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `text-xs font-bold uppercase tracking-widest transition-all hover:text-[var(--color-accent)] relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-[var(--color-accent)] after:scale-x-0 after:transition-transform hover:after:scale-x-100 ${
+                  `text-xs font-bold uppercase tracking-widest hover:text-[var(--color-accent)] relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-[var(--color-accent)] after:scale-x-0 ${
                     isActive ? 'text-[var(--color-primary)] after:scale-x-100' : 'text-[var(--color-text-main)]'
                   }`
                 }

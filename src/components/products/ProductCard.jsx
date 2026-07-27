@@ -9,13 +9,13 @@ const ProductCard = ({ product }) => {
         <img 
           src={product.image} 
           alt={product.name}
-          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+          className="w-full h-full object-cover grayscale hover:grayscale-0"
         />
       </Link>
       
       <div className="flex-grow">
         <Link to={`/products/${product.id}`} className="group">
-          <h3 className="text-xl font-black mb-3 text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors leading-tight">
+          <h3 className="text-xl font-black mb-3 text-[var(--color-primary)] hover:text-[var(--color-accent)] leading-tight">
             {product.name}
           </h3>
         </Link>
@@ -56,7 +56,7 @@ const ProductCard = ({ product }) => {
         </div>
         <Link 
           to={`/products/${product.id}`} 
-          className="text-[var(--color-primary)] font-black flex items-center text-[10px] uppercase tracking-[0.2em] hover:text-[var(--color-accent)] transition-colors"
+          className="text-[var(--color-primary)] font-black flex items-center text-[10px] uppercase tracking-[0.2em] hover:text-[var(--color-accent)]"
         >
           View Specs
           <ArrowRight className="w-3 h-3 ml-2" />

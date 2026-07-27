@@ -43,16 +43,16 @@
 
 @layer components {
   .btn-primary {
-    @apply relative overflow-hidden bg-[var(--color-primary)] text-white px-10 py-5 rounded-[var(--radius-base)] font-bold uppercase tracking-[0.2em] text-[10px] transition-all hover:bg-[var(--color-accent)] active:scale-95 shadow-lg;
+    @apply relative overflow-hidden bg-[var(--color-primary)] text-white px-10 py-5 rounded-[var(--radius-base)] font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-[var(--color-accent)] shadow-lg;
   }
   .btn-outline {
-    @apply border border-[var(--color-primary)] text-[var(--color-primary)] px-10 py-5 rounded-[var(--radius-base)] font-bold uppercase tracking-[0.2em] text-[10px] transition-all hover:bg-[var(--color-primary)] hover:text-white;
+    @apply border border-[var(--color-primary)] text-[var(--color-primary)] px-10 py-5 rounded-[var(--radius-base)] font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-[var(--color-primary)] hover:text-white;
   }
   .section-container {
     @apply max-w-[1440px] mx-auto px-8 py-24 md:py-40;
   }
   .card-premium {
-    @apply bg-white border border-[var(--color-border)] p-10 transition-all duration-700 hover:border-[var(--color-accent)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)];
+    @apply bg-white border border-[var(--color-border)] p-10 hover:border-[var(--color-accent)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)];
   }
   .glass-header {
     @apply bg-[var(--glass-bg)] backdrop-blur-xl border-b border-[var(--glass-border)] sticky top-0 z-50;

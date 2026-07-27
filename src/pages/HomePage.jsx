@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import Hero from '../components/hero/Hero';
 import Features from '../components/features/Features';
 import SectionHeading from '../components/common/SectionHeading';
@@ -39,29 +38,18 @@ const HomePage = () => {
       {/* Featured Products - High-End Presentation */}
       <section className="bg-white">
         <div className="section-container">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <SectionHeading 
               title="High-Performance Materials"
               subtitle="Precision-engineered aluminum-silicon series for demanding global industrial standards."
             />
-          </motion.div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
-            {featuredProducts.map((product, idx) => (
-              <motion.div
-                key={product.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-              >
+            {featuredProducts.map((product) => (
+              <div key={product.id}>
                 <ProductCard product={product} />
-              </motion.div>
+              </div>
             ))}
           </div>
           <div className="text-center mt-20">
@@ -127,8 +115,8 @@ const HomePage = () => {
       <Features />
       
       {/* Call to Action - Grand Exit */}
-      <section className="relative py-32 md:py-48 overflow-hidden bg-white">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[var(--color-bg-base)] -skew-x-12 translate-x-1/4 z-0"></div>
+      <section className="relative py-32 md:py-48 overflow-hidden bg-white border-t border-gray-50">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-[var(--color-bg-alt)] -skew-x-12 translate-x-1/4 z-0"></div>
         <div className="max-w-[1400px] mx-auto px-6 relative z-10">
           <div className="max-w-4xl">
             <h2 className="text-5xl md:text-8xl font-black text-[var(--color-primary)] mb-12 tracking-tighter leading-none">

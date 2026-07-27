@@ -26,7 +26,7 @@ const ProductDetailPage = () => {
   return (
     <div className="section-container" data-component="product-detail-page">
       <Link to="/products" className="inline-flex items-center text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)] mb-8 group">
-        <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
+        <ArrowLeft className="w-4 h-4 mr-2" />
         Back to Technical Catalog
       </Link>
 

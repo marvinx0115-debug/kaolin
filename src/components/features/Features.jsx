@@ -36,8 +36,8 @@ const Features = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {trustItems.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center p-6 rounded-[var(--radius-base)] border border-transparent hover:border-[var(--color-border)] hover:bg-[var(--color-bg-base)] transition-all">
-              <div className="mb-6 bg-[var(--color-bg-base)] p-4 rounded-full">
+            <div key={index} className="flex flex-col items-center text-center p-6 border border-transparent hover:border-[var(--color-border)] hover:bg-[var(--color-bg-alt)]">
+              <div className="mb-6 bg-[var(--color-bg-alt)] p-4 rounded-full">
                 {item.icon}
               </div>
               <h3 className="text-xl font-bold mb-3 text-[var(--color-primary)]">
