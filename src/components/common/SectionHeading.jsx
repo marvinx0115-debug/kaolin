@@ -3,15 +3,15 @@ import React from 'react';
 const SectionHeading = ({ title, subtitle, centered = true }) => {
   return (
     <div className={`mb-12 ${centered ? 'text-center' : ''}`} data-component="section-heading">
-      <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-primary)] mb-4">
+      <h2 className="text-3xl md:text-5xl font-black text-[var(--color-text-heavy)] mb-6 uppercase tracking-tighter">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
+        <p className="text-[var(--color-text-main)] text-lg max-w-2xl font-medium leading-relaxed">
           {subtitle}
         </p>
       )}
-      <div className={`h-1 w-20 bg-[var(--color-accent)] mt-6 ${centered ? 'mx-auto' : ''}`}></div>
+      <div className={`h-[1px] w-24 bg-[var(--color-primary)] mt-10 ${centered ? 'mx-auto' : ''}`}></div>
     </div>
   );
 };

@@ -13,8 +13,8 @@ const ProductsPage = () => {
     : products.filter(p => p.category.toLowerCase() === activeCategory.toLowerCase());
 
   return (
-    <div className="pb-0" data-component="products-page">
-      <div className="bg-[var(--color-bg-alt)] border-b border-gray-100">
+    <div className="pb-0 bg-[var(--color-bg-base)]" data-component="products-page">
+      <div className="bg-white border-b border-[var(--color-border)]">
         <div className="section-container !py-24">
           <SectionHeading 
             title="Technical Catalog"
@@ -26,15 +26,15 @@ const ProductsPage = () => {
 
       <div className="section-container !py-24">
         {/* Horizontal Category Tabs - Premium Minimalist */}
-        <div className="flex flex-wrap gap-px bg-gray-100 border border-gray-100 mb-16">
+        <div className="flex flex-wrap gap-px bg-[var(--color-border)] border border-[var(--color-border)] mb-16">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-10 py-5 text-[10px] font-black uppercase tracking-[0.2em] transition-all flex-grow sm:flex-grow-0 ${
+              className={`px-10 py-5 text-[10px] font-black uppercase tracking-[0.2em] transition-colors flex-grow sm:flex-grow-0 ${
                 activeCategory === cat.id 
-                  ? 'bg-[var(--color-primary)] text-white shadow-2xl' 
-                  : 'bg-white text-[var(--color-text-muted)] hover:bg-gray-50'
+                  ? 'bg-[var(--color-primary)] text-white shadow-xl' 
+                  : 'bg-white text-[var(--color-text-main)] hover:bg-[var(--color-bg-card)]'
               }`}
             >
               {cat.name}
@@ -43,13 +43,13 @@ const ProductsPage = () => {
         </div>
 
         <div className="w-full">
-          <div className="flex justify-between items-center mb-16 border-b border-gray-100 pb-8">
+          <div className="flex justify-between items-center mb-16 border-b border-[var(--color-border)] pb-8">
             <div className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--color-text-muted)]">
-              Inventory: <span className="text-[var(--color-primary)]">{filteredProducts.length}</span> Specs Verified
+              Inventory: <span className="text-[var(--color-text-heavy)]">{filteredProducts.length}</span> Specs Verified
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-100 border border-gray-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--color-border)] border border-[var(--color-border)]">
             {filteredProducts.map(product => (
               <div key={product.id} className="bg-white">
                 <ProductCard product={product} />
@@ -58,7 +58,7 @@ const ProductsPage = () => {
           </div>
 
           {filteredProducts.length === 0 && (
-            <div className="text-center py-40 bg-white">
+            <div className="text-center py-40 bg-white border border-[var(--color-border)]">
               <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[var(--color-text-muted)]">No specifications found matching your criteria.</p>
             </div>
           )}
@@ -68,9 +68,9 @@ const ProductsPage = () => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
             <div className="relative z-10 text-center md:text-left mb-10 md:mb-0">
               <h3 className="text-3xl font-black mb-4 tracking-tighter text-white uppercase">Need Custom Specs?</h3>
-              <p className="text-slate-400 font-medium max-w-md">Our technical team can adjust particle size and purity for your specific industrial application.</p>
+              <p className="text-gray-300 font-bold max-w-md">Our technical team can adjust particle size and purity for your specific industrial application.</p>
             </div>
-            <button className="btn-primary !bg-[var(--color-accent)] relative z-10">
+            <button className="bg-white text-[var(--color-primary)] px-10 py-5 text-[10px] font-black uppercase tracking-widest relative z-10 hover:bg-gray-100 transition-colors">
               Technical Inquiry
             </button>
           </div>
