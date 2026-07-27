@@ -1,41 +1,25 @@
 :root {
-  /* "Mineral Cold Gray" Color System - User Defined */
-  --color-primary: #596369;    /* Mineral Cold Rock Gray - Main Brand */
-  --color-accent: #68808C;     /* Mineral Vein Cyan - Emphasis */
-  --color-accent-soft: #B0B9BE; /* Mica Silver Gray - Secondary Accent */
-  
-  /* Neutral Gray Scale */
-  --color-bg-base: #F5F7F8;    /* Kaolin White - Page Background */
-  --color-bg-card: #E8ECED;    /* Mineral Beige Gray - Card/Section Background */
-  --color-border: #D1D9DD;     /* Light Rock Gray - Borders/Lines */
-  
-  /* Typography Scale */
-  --color-text-main: #606B70;   /* Deep Rock Gray - Body Copy */
-  --color-text-heading: #384044; /* Near Charcoal Gray - Standard Headings */
-  --color-text-heavy: #22272A;   /* Mineral Black - Hero/Footer Headings */
-  --color-text-muted: #9CA6AB;   /* Standard Medium Gray - Captions/Placeholder */
-  
-  /* Functional Colors (Muted) */
-  --color-status-success: #647C74;
-  --color-status-warning: #A88A72;
-  --color-status-error: #8C5A56;
+  /* BASF-inspired "Corporate Excellence" Palette */
+  --color-primary: #004A96;    /* Iconic BASF Blue */
+  --color-secondary: #00AEEF;  /* Technical Cyan */
+  --color-bg-base: #FFFFFF;    /* Pure White */
+  --color-bg-alt: #F2F2F2;     /* Corporate Light Gray */
+  --color-text-main: #333333;   /* High-contrast Gray */
+  --color-text-muted: #666666;
+  --color-border: #D9D9D9;
 
-  /* Glass Effects */
-  --glass-bg: rgba(245, 247, 248, 0.9);
-  --glass-border: rgba(209, 217, 221, 0.5);
-
-  /* Modern Typography */
+  /* Typography: Modern Grotesque Style */
   --font-display: 'Inter', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
-  /* Spacing */
+  /* Massive Spacing */
   --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 2rem;
-  --space-lg: 5rem;
-  --space-xl: 10rem;
+  --space-sm: 1.5rem;
+  --space-md: 3rem;
+  --space-lg: 6rem;
+  --space-xl: 12rem;
 
-  /* Radius */
+  /* BASF Hard Corners */
   --radius-base: 0px; 
 }
 
@@ -44,39 +28,25 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
   body {
     @apply bg-[var(--color-bg-base)] text-[var(--color-text-main)] font-sans antialiased;
   }
   h1, h2, h3 {
-    @apply tracking-tighter font-black;
+    @apply tracking-tight font-bold text-[var(--color-primary)];
   }
-  h1 { @apply text-[var(--color-text-heavy)]; }
-  h2, h3 { @apply text-[var(--color-text-heading)]; }
 }
 
 @layer components {
   .btn-primary {
-    @apply relative overflow-hidden bg-[var(--color-primary)] text-white px-10 py-5 rounded-[var(--radius-base)] font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-[#434C51] shadow-sm;
+    @apply bg-[var(--color-primary)] text-white px-10 py-4 font-bold uppercase tracking-wider text-xs hover:bg-[var(--color-secondary)] transition-colors shadow-sm;
   }
   .btn-outline {
-    @apply border border-[var(--color-primary)] text-[var(--color-primary)] px-10 py-5 rounded-[var(--radius-base)] font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-[var(--color-primary)] hover:text-white;
+    @apply border-2 border-[var(--color-primary)] text-[var(--color-primary)] px-10 py-4 font-bold uppercase tracking-wider text-xs hover:bg-[var(--color-primary)] hover:text-white transition-colors;
   }
   .section-container {
-    @apply max-w-[1440px] mx-auto px-8 py-24 md:py-40;
+    @apply max-w-[1440px] mx-auto px-10 py-32;
   }
   .card-premium {
-    @apply bg-white border border-[var(--color-border)] p-10 hover:border-[var(--color-accent)] hover:shadow-[0_20px_40px_rgba(89,99,105,0.05)];
-  }
-  .glass-header {
-    @apply bg-[var(--glass-bg)] backdrop-blur-xl border-b border-[var(--glass-border)] sticky top-0 z-50;
-  }
-  .table-header {
-    @apply bg-[var(--color-primary)] text-white font-bold;
-  }
-  .table-row-alt {
-    @apply bg-[var(--color-bg-card)];
+    @apply bg-white border border-[var(--color-border)] p-12 hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] transition-shadow;
   }
 }
