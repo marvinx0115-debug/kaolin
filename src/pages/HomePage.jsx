@@ -88,22 +88,21 @@ const HomePage = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-gray-200 border border-gray-200 mt-24">
             {solutions.map((sol, index) => (
-              <motion.div 
+              <div 
                 key={index}
-                whileHover={{ backgroundColor: "var(--color-bg-base)" }}
-                className="bg-white group p-12 flex flex-col transition-all duration-500"
+                className="bg-white p-12 flex flex-col"
               >
                 <div className="mb-12 flex justify-between items-start">
-                  <span className="text-4xl font-black text-[var(--color-accent)] opacity-20 group-hover:opacity-100 transition-opacity">
+                  <span className="text-4xl font-black text-[var(--color-accent)]">
                     0{index + 1}
                   </span>
-                  <div className="p-4 bg-gray-50 rounded-full group-hover:bg-[var(--color-accent)]/10 transition-colors">
+                  <div className="p-4 bg-[var(--color-accent)]/5 rounded-full">
                     {sol.icon}
                   </div>
                 </div>
 
                 <div className="aspect-[4/3] w-full overflow-hidden mb-12">
-                  <img src={sol.image} alt={sol.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110" />
+                  <img src={sol.image} alt={sol.title} className="w-full h-full object-cover" />
                 </div>
 
                 <h3 className="text-3xl font-black mb-6 leading-tight text-[var(--color-primary)]">
@@ -116,10 +115,10 @@ const HomePage = () => {
                 <div className="mt-auto">
                   <Link to="/solutions" className="inline-flex items-center text-[10px] font-black uppercase tracking-[0.3em] text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors">
                     View Details
-                    <ArrowRight className="ml-4 w-4 h-4 transition-transform group-hover:translate-x-2" />
+                    <ArrowRight className="ml-4 w-4 h-4" />
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
