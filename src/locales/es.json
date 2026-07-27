@@ -1,0 +1,42 @@
+{
+  "common": {
+    "brand": "APEX",
+    "brandSubtitle": "Soluciones Minerales de Precisión",
+    "inquiry": "Consulta",
+    "requestQuote": "Solicitar Cotización",
+    "viewMore": "Saber Más",
+    "back": "Volver",
+    "submit": "Enviar",
+    "email": "Correo Electrónico Profesional",
+    "company": "Nombre de la Empresa",
+    "allProducts": "Todos los Productos"
+  },
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "solutions": "Soluciones",
+    "blog": "Blog",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "Soluciones Refractarias Premium",
+    "title": "Materiales Refractarios de 1790°C de Alta Precisión",
+    "subtitle": "Apex Kaolín y Mullita proporciona materiales de aluminio-silicio de alta pureza para las industrias globales de fundición, refractarios y cerámica.",
+    "cta1": "Ver Datos del Producto",
+    "cta2": "Solicitar RFQ Técnica",
+    "stat1": "Refractariedad",
+    "stat2": "Contenido de Al₂O₃",
+    "stat3": "Estándares Globales",
+    "stat4": "Soporte Técnico"
+  },
+  "footer": {
+    "desc": "Proveedor global líder de materiales refractarios de aluminio-silicio de alta pureza. Especializado en fundición de precisión y soluciones de calor industrial.",
+    "techCenter": "Centro Técnico",
+    "techDesc": "Descargue hojas de TDS y MSDS desidentificadas para todas las series de productos.",
+    "downloadBtn": "Descargar Guía PDF",
+    "contactUs": "Contáctenos",
+    "hq": "Sede Global",
+    "rights": "Todos los derechos reservados."
+  }
+}

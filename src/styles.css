@@ -1,0 +1,60 @@
+:root {
+  /* "Mineral Purity & Power" Color System */
+  --color-primary: #111827; /* Rich Obsidian Black - Authoritative */
+  --color-accent: #D97706;  /* Muted Molten Gold - High-temp Industry */
+  --color-bg-base: #FFFFFF; /* Kaolin Purity White */
+  --color-bg-alt: #F9FAFB;  /* Soft Quartz Gray */
+  --color-text-main: #1F2937;
+  --color-text-muted: #6B7280;
+  --color-border: #E5E7EB;
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(0, 0, 0, 0.05);
+
+  /* Refined Typography */
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Atmospheric Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 5rem;
+  --space-xl: 10rem;
+
+  /* Sophisticated Radius */
+  --radius-base: 0px; /* Zero radius for a sharp, high-end industrial engineering feel */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-[var(--color-bg-base)] text-[var(--color-text-main)] font-sans antialiased;
+  }
+  h1, h2, h3 {
+    @apply tracking-tighter font-black text-[var(--color-primary)];
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative overflow-hidden bg-[var(--color-primary)] text-white px-10 py-5 rounded-[var(--radius-base)] font-bold uppercase tracking-[0.2em] text-[10px] transition-all hover:bg-[var(--color-accent)] active:scale-95 shadow-lg;
+  }
+  .btn-outline {
+    @apply border border-[var(--color-primary)] text-[var(--color-primary)] px-10 py-5 rounded-[var(--radius-base)] font-bold uppercase tracking-[0.2em] text-[10px] transition-all hover:bg-[var(--color-primary)] hover:text-white;
+  }
+  .section-container {
+    @apply max-w-[1440px] mx-auto px-8 py-24 md:py-40;
+  }
+  .card-premium {
+    @apply bg-white border border-[var(--color-border)] p-10 transition-all duration-700 hover:border-[var(--color-accent)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)];
+  }
+  .glass-header {
+    @apply bg-[var(--glass-bg)] backdrop-blur-xl border-b border-[var(--glass-border)] sticky top-0 z-50;
+  }
+}

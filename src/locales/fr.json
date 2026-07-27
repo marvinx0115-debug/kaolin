@@ -1,0 +1,42 @@
+{
+  "common": {
+    "brand": "APEX",
+    "brandSubtitle": "Solutions Minérales de Précision",
+    "inquiry": "Demande",
+    "requestQuote": "Demander un Devis",
+    "viewMore": "En savoir plus",
+    "back": "Retour",
+    "submit": "Envoyer",
+    "email": "Email professionnel",
+    "company": "Nom de l'entreprise",
+    "allProducts": "Tous les produits"
+  },
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "solutions": "Solutions",
+    "blog": "Blog",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Solutions Réfractaires Premium",
+    "title": "Matériaux Réfractaires 1790°C de Haute Précision",
+    "subtitle": "Apex Kaolin & Mullite fournit des matériaux aluminium-silicium de haute pureté pour les industries mondiales de la fonderie, des réfractaires et de la céramique.",
+    "cta1": "Voir les données produit",
+    "cta2": "Demander une RFQ technique",
+    "stat1": "Réfractarité",
+    "stat2": "Teneur en Al₂O₃",
+    "stat3": "Normes mondiales",
+    "stat4": "Support technique"
+  },
+  "footer": {
+    "desc": "Premier fournisseur mondial de matériaux réfractaires aluminium-silicium de haute pureté. Spécialisé dans la fonderie de précision et les solutions de chaleur industrielle.",
+    "techCenter": "Centre Technique",
+    "techDesc": "Téléchargez les fiches TDS et MSDS désidentifiées pour toutes les séries de produits.",
+    "downloadBtn": "Télécharger le guide PDF",
+    "contactUs": "Contactez-nous",
+    "hq": "Siège mondial",
+    "rights": "Tous droits réservés."
+  }
+}

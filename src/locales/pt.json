@@ -1,0 +1,42 @@
+{
+  "common": {
+    "brand": "APEX",
+    "brandSubtitle": "Soluções Minerais de Precisão",
+    "inquiry": "Consulta",
+    "requestQuote": "Solicitar Orçamento",
+    "viewMore": "Saber Mais",
+    "back": "Voltar",
+    "submit": "Enviar",
+    "email": "E-mail Profissional",
+    "company": "Nome da Empresa",
+    "allProducts": "Todos os Produtos"
+  },
+  "nav": {
+    "home": "Início",
+    "products": "Produtos",
+    "solutions": "Soluções",
+    "blog": "Blog",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "hero": {
+    "badge": "Soluções Refratárias Premium",
+    "title": "Materiais Refratários de 1790°C de Engenharia de Precisão",
+    "subtitle": "Apex Caulim e Mulita fornece materiais de alumínio-silício de alta pureza para as indústrias globais de fundição, refratários e cerâmica.",
+    "cta1": "Ver Dados do Produto",
+    "cta2": "Solicitar RFQ Técnica",
+    "stat1": "Refratariedade",
+    "stat2": "Conteúdo de Al₂O₃",
+    "stat3": "Padrões Globais",
+    "stat4": "Suporte Técnico"
+  },
+  "footer": {
+    "desc": "Fornecedor global líder de materiais refratários de alumínio-silício de alta pureza. Especializado em fundição de precisão e soluções de calor industrial.",
+    "techCenter": "Centro Técnico",
+    "techDesc": "Baixe folhas de TDS e MSDS desidentificadas para todas as séries de produtos.",
+    "downloadBtn": "Baixar Guia PDF",
+    "contactUs": "Contate-nos",
+    "hq": "Sede Global",
+    "rights": "Todos os direitos reservados."
+  }
+}
